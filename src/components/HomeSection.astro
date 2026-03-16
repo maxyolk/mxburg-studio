@@ -5,8 +5,13 @@ const { lang = 'en' } = Astro.props;
 const i = t(lang).home;
 ---
 <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-  <!-- Background: replace this div with an <img> or CSS background when the hero image is ready -->
-  <div class="absolute inset-0 bg-[#1a1a1a]"></div>
+  <img
+    src="/images/hero.jpg"
+    alt="Curved architectural walkway, ICE Congress Centre, Kraków"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+    fetchpriority="high"
+  />
+  <div class="absolute inset-0 bg-black/55"></div>
 
   <!-- Centred overlay -->
   <div class="relative z-10 text-center text-white px-6 max-w-3xl mx-auto">

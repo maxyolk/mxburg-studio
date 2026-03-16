@@ -5,12 +5,12 @@ const { lang = 'en' } = Astro.props;
 const i = t(lang).inSitu;
 // In-situ / installation shots — replace placeholder divs with <img> tags
 const shots = [
-  { id: 1, alt: 'Print installed in a hotel lobby, warm evening light' },
-  { id: 2, alt: 'Diptych above a credenza in a private residence' },
-  { id: 3, alt: 'Large format print in a boardroom setting' },
-  { id: 4, alt: 'Gallery wall arrangement in an open-plan office' },
-  { id: 5, alt: 'Single oversized print in a minimal corridor' },
-  { id: 6, alt: 'Framed series in a boutique hotel bedroom' },
+  { src: '/images/insitu/001.jpg', alt: 'Cyclist beneath a misty iron bridge' },
+  { src: '/images/insitu/002.jpg', alt: 'Woman passing a lit café window, Kraków old town' },
+  { src: '/images/insitu/003.jpg', alt: 'Figure walking in snowfall against a stone wall' },
+  { src: '/images/insitu/004.jpg', alt: 'Man walking through a Gothic arch, Wawel courtyard' },
+  { src: '/images/insitu/005.jpg', alt: 'Footprints seen through a glass floor panel' },
+  { src: '/images/insitu/006.jpg', alt: 'Pigeons lifting from a foggy Kraków square' },
 ];
 ---
 <section id="in-situ" class="py-24 px-6 md:px-12 lg:px-20 bg-[#f7f6f4]">
@@ -42,8 +42,12 @@ const shots = [
             md:w-auto md:flex-auto
           "
         >
-          <!-- Placeholder: replace with <img src={shot.src} alt={shot.alt} class="w-full aspect-video object-cover" /> -->
-          <div class="w-full aspect-video bg-[#2a2a2a]"></div>
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            class="w-full aspect-[3/4] object-cover"
+            loading="lazy"
+          />
         </div>
       ))}
     </div>

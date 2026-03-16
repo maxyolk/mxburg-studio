@@ -15,10 +15,12 @@ import works from '../data/works.json';
             data-title={`${work.title}, ${work.year}`}
             data-description={`${work.edition} · ${work.sizes.join(' / ')}`}
           >
-            <!-- Placeholder image div — replace with <img> when images are ready -->
-            <div
-              class={`bg-[#2a2a2a] w-full ${work.orientation === 'landscape' ? 'aspect-[4/3]' : 'aspect-[3/4]'}`}
-            ></div>
+            <img
+              src={work.image}
+              alt={work.altText}
+              class={`w-full object-cover ${work.orientation === 'landscape' ? 'aspect-[4/3]' : 'aspect-[3/4]'}`}
+              loading="lazy"
+            />
 
             <!-- Hover overlay -->
             <div
