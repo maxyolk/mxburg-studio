@@ -1,13 +1,17 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import HomeSection from '../components/HomeSection.astro';
+import WorkGrid from '../components/WorkGrid.astro';
+import InSituSection from '../components/InSituSection.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Studio — Max Burg</title>
-  </head>
-  <body class="bg-white text-black">
-    <h1 class="text-4xl font-bold">Studio</h1>
-  </body>
-</html>
+<Layout>
+  <HomeSection />
+  <WorkGrid />
+  <InSituSection />
+  <ProcessSection />
+  <AboutSection />
+  <ContactSection />
+</Layout>

@@ -1,0 +1,58 @@
+---
+// All copy is defined here — edit without touching the template
+const content = {
+  openingLine: 'Photography rooted in architecture, light, and the passage of time.',
+  paragraphs: [
+    'Copy to be supplied. This is placeholder text for the first paragraph, describing the photographer\'s practice, approach, and the kind of spaces and clients they work with.',
+    'Copy to be supplied. Second paragraph expanding on process, philosophy, or notable projects. Keep it understated — let the work speak.',
+  ],
+  credentials: [
+    { label: 'Exhibitions', value: 'To be listed' },
+    { label: 'Camera system', value: 'Medium format, 6×7' },
+    { label: 'Based', value: 'Kraków, Poland' },
+  ],
+};
+---
+<section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-[#f7f6f4]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-start">
+
+      <!-- Text column -->
+      <div>
+        <p class="font-display font-light text-2xl md:text-3xl leading-snug mb-8 text-neutral-900">
+          {content.openingLine}
+        </p>
+
+        <div class="space-y-4 mb-12">
+          {content.paragraphs.map((para) => (
+            <p class="text-sm font-light leading-relaxed text-neutral-600">
+              {para}
+            </p>
+          ))}
+        </div>
+
+        <!-- Credentials block -->
+        <dl class="space-y-2 border-t border-neutral-200 pt-6">
+          {content.credentials.map((item) => (
+            <div class="flex gap-6">
+              <dt class="text-[10px] tracking-[0.3em] uppercase text-neutral-400 w-28 flex-none font-light pt-0.5">
+                {item.label}
+              </dt>
+              <dd class="text-xs font-light text-neutral-600">
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <!-- Portrait image column -->
+      <div>
+        <!-- Placeholder: replace with <img src="/images/portrait.jpg" alt="Max Burgess" class="w-full aspect-[3/4] object-cover" /> -->
+        <div class="w-full aspect-[3/4] bg-[#2a2a2a]"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
