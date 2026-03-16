@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/translations';
+const i = t('pl').success;
+---
+<Layout
+  lang="pl"
+  title="Wiadomość wysłana — Max Burgess Studio"
+  description="Dziękuję za wiadomość."
+>
+  <section class="min-h-screen flex items-center justify-center px-6 bg-white">
+    <div class="text-center max-w-sm">
+      <p class="text-[10px] tracking-[0.4em] uppercase text-neutral-400 font-light mb-6">
+        {i.eyebrow}
+      </p>
+      <h1 class="font-display font-light text-3xl md:text-4xl tracking-wide mb-5 text-neutral-900">
+        {i.heading}
+      </h1>
+      <p class="text-sm font-light leading-relaxed text-neutral-500 mb-10">
+        {i.subtext}
+      </p>
+      <a
+        href="/pl"
+        class="text-xs tracking-[0.35em] uppercase font-light text-neutral-500 border-b border-neutral-300 pb-0.5 hover:text-neutral-900 hover:border-neutral-600 transition-all duration-300"
+      >
+        {i.back}
+      </a>
+    </div>
+  </section>
+</Layout>

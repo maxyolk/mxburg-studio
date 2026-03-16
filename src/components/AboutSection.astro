@@ -1,17 +1,8 @@
 ---
-// All copy is defined here — edit without touching the template
-const content = {
-  openingLine: 'Photography rooted in architecture, light, and the passage of time.',
-  paragraphs: [
-    'Copy to be supplied. This is placeholder text for the first paragraph, describing the photographer\'s practice, approach, and the kind of spaces and clients they work with.',
-    'Copy to be supplied. Second paragraph expanding on process, philosophy, or notable projects. Keep it understated — let the work speak.',
-  ],
-  credentials: [
-    { label: 'Exhibitions', value: 'To be listed' },
-    { label: 'Camera system', value: 'Medium format, 6×7' },
-    { label: 'Based', value: 'Kraków, Poland' },
-  ],
-};
+import { t, type Lang } from '../i18n/translations';
+interface Props { lang?: Lang; }
+const { lang = 'en' } = Astro.props;
+const content = t(lang).about;
 ---
 <section id="about" class="py-24 px-6 md:px-12 lg:px-20 bg-[#f7f6f4]">
   <div class="max-w-7xl mx-auto">

@@ -1,4 +1,8 @@
 ---
+import { t, type Lang } from '../i18n/translations';
+interface Props { lang?: Lang; }
+const { lang = 'en' } = Astro.props;
+const i = t(lang).inSitu;
 // In-situ / installation shots — replace placeholder divs with <img> tags
 const shots = [
   { id: 1, alt: 'Print installed in a hotel lobby, warm evening light' },
@@ -15,11 +19,10 @@ const shots = [
     <!-- Header -->
     <div class="mb-14">
       <h2 class="font-display font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-5">
-        The work, in place.
+        {i.heading}
       </h2>
       <p class="text-sm font-light leading-relaxed text-neutral-600 max-w-xl">
-        Each piece is considered for the space it will inhabit.
-        We offer curation consultations before any commitment.
+        {i.subtext}
       </p>
     </div>
 

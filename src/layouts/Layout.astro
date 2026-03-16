@@ -5,12 +5,14 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  lang?: 'en' | 'pl';
 }
 
 const {
   title = 'Max Burgess Studio — Fine Art Photography for Interiors',
   description = 'Bespoke B&W fine art prints for hotels, offices, and considered interiors. Based in Kraków, Poland.',
   ogImage = '/og-image.jpg',
+  lang = 'en',
 } = Astro.props;
 
 const siteUrl = 'https://studio.mxburg.com';
@@ -18,7 +20,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

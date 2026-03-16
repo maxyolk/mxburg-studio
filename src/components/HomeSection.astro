@@ -1,5 +1,8 @@
 ---
-// No props — copy is defined here
+import { t, type Lang } from '../i18n/translations';
+interface Props { lang?: Lang; }
+const { lang = 'en' } = Astro.props;
+const i = t(lang).home;
 ---
 <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
   <!-- Background: replace this div with an <img> or CSS background when the hero image is ready -->
@@ -10,18 +13,18 @@
     <h1
       class="font-display font-light text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] leading-tight tracking-wide mb-6"
     >
-      Bespoke fine art photography for considered interiors
+      {i.headline}
     </h1>
 
     <p class="text-xs tracking-[0.4em] uppercase font-light mb-14 text-white/60">
-      Max Burgess — Kraków
+      {i.subline}
     </p>
 
     <a
       href="#work"
       class="text-xs tracking-[0.35em] uppercase font-light text-white/80 border-b border-white/30 pb-0.5 hover:text-white hover:border-white/70 transition-all duration-300"
     >
-      View the work
+      {i.cta}
     </a>
   </div>
 </section>
