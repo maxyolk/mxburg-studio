@@ -58,19 +58,19 @@ const ogImageUrl = new URL(ogImage, siteUrl).toString();
     />
   </head>
   <body class="bg-white text-neutral-900">
-    <!-- Language switcher -->
-    <nav class="fixed top-0 right-0 z-50 p-5 flex gap-3 mix-blend-difference">
+    <!-- Language switcher — mix-blend-difference keeps text readable on any background -->
+    <nav class="fixed top-0 right-0 z-50 p-5 flex items-center gap-2.5 mix-blend-difference">
       {lang === 'en' ? (
         <>
-          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white">EN</span>
-          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white/30">·</span>
-          <a href={plHref} class="text-[10px] tracking-[0.25em] uppercase font-light text-white/40 hover:text-white/80 transition-colors duration-200">PL</a>
+          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white border-b border-white pb-px">EN</span>
+          <span class="text-[9px] text-white">·</span>
+          <a href={plHref} class="text-[10px] tracking-[0.25em] uppercase font-light text-white opacity-40 hover:opacity-80 transition-opacity duration-200">PL</a>
         </>
       ) : (
         <>
-          <a href={enHref} class="text-[10px] tracking-[0.25em] uppercase font-light text-white/40 hover:text-white/80 transition-colors duration-200">EN</a>
-          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white/30">·</span>
-          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white">PL</span>
+          <a href={enHref} class="text-[10px] tracking-[0.25em] uppercase font-light text-white opacity-40 hover:opacity-80 transition-opacity duration-200">EN</a>
+          <span class="text-[9px] text-white">·</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase font-light text-white border-b border-white pb-px">PL</span>
         </>
       )}
     </nav>
